@@ -53,12 +53,10 @@ public class Uniform {
         for(int i=0;i<lost.length;i++) {
         	//도난당한 학생의 앞 번호 학생이 여분이 있는지 확인
         	 if(Arrays.binarySearch(reserve, lost[i]-1)>=0){
-        		System.out.println(lost[i]+"번 학생이"+reserve[Arrays.binarySearch(reserve, lost[i]-1)]+"번을 가져감");
         		reserve[Arrays.binarySearch(reserve, lost[i]-1)]=-1;
         		answer++;
        		//도난당한 학생의 뒷 번호 학생이 여분이 있는지 확인
         	}else if(Arrays.binarySearch(reserve, lost[i]+1)>=0) {
-        		System.out.println(lost[i]+"번 학생이"+reserve[Arrays.binarySearch(reserve, lost[i]+1)]+"번을 가져감");
         		reserve[Arrays.binarySearch(reserve, lost[i]+1)]=-1;
         		answer++;
         	}
